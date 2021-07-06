@@ -1,16 +1,18 @@
-### Hi there 👋
+import random 
 
-<!--
-**Mihas9/Mihas9** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+mas=[random.randint(-100,100) for x in range(30)]
+print(mas)
 
-Here are some ideas to get you started:
+nomer = mas[0]
+pos = 0
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+for x in range(1, len(mas)):
+ if mas[x] > nomer:
+  nomer = mas[x]
+  pos = x + 1
+print("Max element:", nomer, "Sequence number:", pos)
+
+print("Pairs of negative numbers standing side by side:")
+for x in range(x):
+  if mas[x] < 0 and mas[x + 1] < 0:
+    print(mas[x], mas[x + 1])
